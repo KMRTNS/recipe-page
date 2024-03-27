@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-body: #eaeaea;
+  --bg-recipe: #ffffff;
+  --color-titles: #1b1b1b;
+  --color-cover: #8f8f8f;
+  --color-outhers: #39393a;
+  --font-family-roboto: "Roboto", sans-serif;
+}
+
+body {
+  background: var(--bg-body);
+  font-family: var(--font-family-roboto);
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  background: var(--bg-recipe);
+  padding: 20px 10px;
+}
+
+.ingredients,
+.ingredients_list,
+.preparation,
+.preparation_list,
+.information {
+  display: flex;
+  flex-direction: column;
+}
+
+.cover_title {
+  font-size: 24px;
+}
+
+.cover_title,
+.ingredients_title,
+.preparation_title,
+.information_title {
+  color: var(--color-titles);
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.ingredients_title,
+.preparation_title,
+.information_title {
+  font-size: 18px;
+  margin: 24px 0 20px;
+}
+
+.cover {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cover_figure {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.figure_cover {
+  background: url("https://images.pexels.com/photos/2098143/pexels-photo-2098143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center/cover;
+  border-radius: 20px;
+  height: 200px;
+  width: 100%;
+}
+
+.figure_rublic {
+  color: var(--color-cover);
+  text-align: right;
+  font-size: 12px;
+}
+
+.list_item {
+  color: var(--color-outhers);
+  margin-left: 20px;
+  line-height: 28px;
+}
+
+.footer {
+  color: var(--color-cover);
+  font-size: 14px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer_author {
+  color: var(--color-outhers);
+}
+
+@media (min-width: 540px) {
+  body {
+    padding: 24px 0;
+  }
+
+  .container {
+    border-radius: 10px;
+    margin: auto;
+    max-width: 540px;
+    padding: 64px 24px 24px;
+  }
+
+  .cover_title {
+    font-size: 32px;
+  }
+
+  .figure_rublic {
+    font-size: 16px;
+  }
+
+  .ingredients_title,
+  .preparation_title,
+  .information_title {
+    font-size: 24px;
+  }
+
+  .list_item {
+    line-height: 36px;
+  }
+
+  .list_item,
+  .information_paragraph {
+    font-size: 18px;
+  }
+
+  .footer {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 940px) {
+  .container {
+    min-width: 940px;
+  }
+}
